@@ -1,10 +1,9 @@
-"use strict";
-
 var gulp = require('gulp');
-var sass = require('gulp-sass'),
-    uglifyjs = require('gulp-uglifyjs'),
-    //cssPrefix = require('gulp-autoprefixer'),
-    BS = require('browser-sync');
+var sass = require('gulp-sass');
+//uglifyjs = require('gulp-uglifyjs'),
+//cssPrefix = require('gulp-autoprefixer'),
+/*BS = require('browser-sync')*/
+;
 
 var config = {
     app: './app',
@@ -25,13 +24,13 @@ gulp.task('default', ['test', 'html', 'sass'], function () {
 });
 
 gulp.task('html', function () {
-    gulp.src([config.app + '/html/index.html'])
+    gulp.src([config.app + '/html/lesson6.html'])
         .pipe(gulp.dest(config.dist));
 });
 
 gulp.task('sass', function () {
 
-    gulp.src([config.app + '/sass/index.scss'])
+    gulp.src([config.app + '/sass/main.scss'])
         .pipe(sass())
         //.pipe(cssPrefix())
         .pipe(gulp.dest(config.dist + '/css'));
