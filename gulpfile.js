@@ -1,10 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cssPrefix = require('gulp-autoprefixer');
-var uglifyjs = require('gulp-uglifyjs');
-//cssPrefix = require('gulp-autoprefixer'),
-/*BS = require('browser-sync')*/
-;
+var uglifyjs = require('gulp-uglify-es').default;
+var BS = require('browser-sync');
+
 
 var config = {
     app: './app',
@@ -16,7 +15,7 @@ var config = {
 3. gulp.dest() - сохраняет уже преобразованные файлы
 */
 
-gulp.task('default', ['html', 'sass', 'js'], function () {
+gulp.task('default', ['html', 'sass', 'js', 'mywatch', 'server'], function () {
     console.log('task default');
 });
 
@@ -37,4 +36,19 @@ gulp.task('js', function () {
     gulp.src([config.app + '/js/**/*.js'])
         .pipe(uglifyjs())
         .pipe(gulp.dest(config.dist + '/js'));
+});
+
+gulp.task('mywatch', function () {
+    gulp.watch([config.app + '/html/lesson6.html'], ['html']);
+    gulp.watch([config.app + '/sass/**/*.scss'], ['sass']);
+    gulp.watch([config.app + '/js/**/*.js'], ['js']);
+});
+
+// Server
+gulp.task('server', function () {
+    BS({
+        server: {
+            baseDir: config.dist
+        }
+    })
 });
