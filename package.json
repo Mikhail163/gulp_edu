@@ -13,7 +13,9 @@
     "gulp-clean": "^0.4.0"
   },
   "devDependencies": {
-    "gulp-sass": "^4.0.1"
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglifyjs": "^0.6.2"
   },
   "repository": {
     "type": "git",

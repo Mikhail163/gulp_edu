@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-//uglifyjs = require('gulp-uglifyjs'),
+var cssPrefix = require('gulp-autoprefixer');
+var uglifyjs = require('gulp-uglifyjs');
 //cssPrefix = require('gulp-autoprefixer'),
 /*BS = require('browser-sync')*/
 ;
@@ -15,11 +16,7 @@ var config = {
 3. gulp.dest() - сохраняет уже преобразованные файлы
 */
 
-gulp.task('test', function () {
-    console.log('Hello world');
-});
-
-gulp.task('default', ['test', 'html', 'sass'], function () {
+gulp.task('default', ['html', 'sass', 'js'], function () {
     console.log('task default');
 });
 
@@ -32,6 +29,12 @@ gulp.task('sass', function () {
 
     gulp.src([config.app + '/sass/main.scss'])
         .pipe(sass())
-        //.pipe(cssPrefix())
+        .pipe(cssPrefix())
         .pipe(gulp.dest(config.dist + '/css'));
+});
+
+gulp.task('js', function () {
+    gulp.src([config.app + '/js/**/*.js'])
+        .pipe(uglifyjs())
+        .pipe(gulp.dest(config.dist + '/js'));
 });
