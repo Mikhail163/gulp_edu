@@ -1,0 +1,22 @@
+{
+  "name": "cart",
+  "authors": [
+    "Mikhail163 <mephist0_87@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "^1.12.1",
+    "slick-carousel": "slick-slide#^1.8.1"
+  }
+}

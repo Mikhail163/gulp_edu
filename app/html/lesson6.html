@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 6 HomeWork</title>
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/vader/jquery-ui.min.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/vader/theme.css">
+
+
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="js/feedback.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/lesson6.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="slider multiple-items">
+
+        <div id="pr1" class="pr" data-pr_id="pr1">
+            <div class="pr-img"><img id="pr1-img" src="i/1.jpg" alt="Машина 1"></div>
+            <div class="pr-info">
+                <div id="pr1-name" data-pr_name="pr1-name" class="pr-info-name">Машина 1</div>
+                <div class="pr-info-description">Очень хорошая машина</div>
+                <div class="pr-info-price" data-pr1_price="8500000">8 500 000 рублей</div>
+                <input id="pr1-incart-click" type="submit" class="pr-info-incart" value="Купить">
+            </div>
+        </div>
+
+        <div id="pr2" class="pr" data-pr_id="pr2">
+            <div class="pr-img"><img id="pr2-img" src="i/2.jpg" alt="Запорожец"></div>
+            <div class="pr-info">
+                <div id="pr2-name" data-pr_name="pr2-name" class="pr-info-name">Запорожец</div>
+                <div class="pr-info-description">Дешево и очень сердито</div>
+                <div class="pr-info-price" data-pr2_price="300000">300 000 рублей</div>
+                <input id="pr2-incart-click" type="submit" class="pr-info-incart" value="Купить">
+            </div>
+        </div>
+
+        <div id="pr3" class="pr" data-pr_id="pr3">
+            <div class="pr-img"><img id="pr3-img" src="i/3.jpg" alt="Машина 3"></div>
+            <div class="pr-info">
+                <div id="pr3-name" data-pr_name="pr3-name" class="pr-info-name">Машина 3</div>
+                <div class="pr-info-description">Нормальная тачила, для дачи пойдет</div>
+                <div class="pr-info-price" data-pr3_price="11250000">11 250 000 рублей</div>
+                <input id="pr3-incart-click" type="submit" class="pr-info-incart" value="Купить">
+            </div>
+        </div>
+
+        <div id="pr4" class="pr" data-pr_id="pr4">
+            <div class="pr-img"><img id="pr4-img" src="i/4.jpg" alt="Машина 4"></div>
+            <div class="pr-info">
+                <div id="pr4-name" data-pr_name="pr4-name" class="pr-info-name">Машина 4</div>
+                <div class="pr-info-description">Двери красиво открываются</div>
+                <div class="pr-info-price" data-pr4_price="8550000">8 550 000 рублей</div>
+                <input id="pr4-incart-click" type="submit" class="pr-info-incart" value="Купить">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <hr>
+
+    <div class="cart">
+
+        <div class="item50">
+            <div class="title">Корзина</div>
+
+            <div id="cart">
+
+            </div>
+
+        </div>
+
+
+
+        <div id="feedback"></div>
+    </div>
+
+    <hr>
+
+    <div class="flex">
+        <div id="pr5" class="pr ui-widget ui-widget-content" data-pr_id="pr5">
+            <div class="pr-img"><img id="pr5-img" src="i/5.jpg" alt="Запорожец"></div>
+            <div class="pr-info">
+                <div id="pr5-name" data-pr_name="pr5-name" class="pr-info-name">Машина 5</div>
+                <div class="pr-info-description">Спорт это сила</div>
+                <div class="pr-info-price" data-pr5_price="10300000">10 300 000 рублей</div>
+                <input id="pr5-incart-click" type="submit" class="pr-info-incart" value="Купить">
+            </div>
+        </div>
+
+        <div id="pr6" class="pr ui-widget ui-widget-content" data-pr_id="pr6">
+            <div class="pr-img"><img id="pr6-img" src="i/6.jpg" alt="Запорожец"></div>
+            <div class="pr-info">
+                <div id="pr6-name" data-pr_name="pr6-name" class="pr-info-name">Машина 6</div>
+                <div class="pr-info-description">Сама элегантность</div>
+                <div class="pr-info-price" data-pr6_price="7850000">7 850 000 рублей</div>
+                <input id="pr6-incart-click" type="submit" class="pr-info-incart" value="Купить">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
